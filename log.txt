@@ -1,1 +1,12 @@
-Логи работы программы
+@echo off
+echo ========================================
+echo   Создание резервной копии базы mydb
+echo ========================================
+
+"C:\Users\Irina\Desktop\mysql\bin\mysqldump.exe" -u root -P 55555 --databases mydb > "C:\Users\Irina\Desktop\mysql\lab3_backup\mydb_backup_%DATE:~10,4%%DATE:~4,2%%DATE:~7,2%.sql"
+
+echo.
+echo ✅ Резервная копия создана!
+echo 📁 Файл сохранён в папке lab3_backup
+echo.
+pause
